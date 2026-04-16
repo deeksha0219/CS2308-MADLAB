@@ -1,23 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { View, 
+        Text, 
+        StyleSheet, 
+        Image, 
+        TouchableOpacity, 
+        ScrollView, 
+        Alert 
+       } from 'react-native';
 
 function App() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.card}>
-        {/* Profile Image */}
         <Image
           source={{
-            uri: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
+            uri: 'blob:https://web.whatsapp.com/f8f30ca6-3f6f-4bd9-ad42-857079457418',
           }}
           style={styles.profileImage}
         />
 
-        {/* Name */}
-        <Text style={styles.name}>Swayam Deeksha R B</Text>
-        <Text style={styles.subtitle}>Student - RV University</Text>
+        <Text style={styles.name}>Deeksha</Text>
+        <Text style={styles.subtitle}>Student at RV University</Text>
 
-        {/* Buttons */}
         <View style={styles.buttonRow}>
           <TouchableOpacity
             style={styles.primaryButton}
@@ -30,44 +34,24 @@ function App() {
             onPress={() => Alert.alert("Opening Email...")}>
             <Text style={styles.buttonText}>Email</Text>
           </TouchableOpacity>
-
         </View>
 
-        {/* Technical Skills */}
         <Text style={styles.sectionTitle}>Technical Skills</Text>
         <Text style={styles.text}>• C, Python</Text>
         <Text style={styles.text}>• HTML, CSS</Text>
         <Text style={styles.text}>• VS Code</Text>
         <Text style={styles.text}>• Windows, Linux</Text>
 
-        {/* Education */}
         <Text style={styles.sectionTitle}>Education</Text>
         <Text style={styles.text}>
-          BCA (Hons.), RV University (2024 - Present)
+          BCA (Hons.), RV University (2024)
         </Text>
-        <Text style={styles.text}>
-          Higher Secondary, NMKRV PU College (2022 - 2024)
-        </Text>
-        <Text style={styles.text}>
-          Secondary, CBSE (2021 - 2022)
-        </Text>
-
-        {/* Languages */}
+        
         <Text style={styles.sectionTitle}>Languages</Text>
         <Text style={styles.text}>
-          English, Hindi, Kannada, Telugu
+          Kannada, English, Hindi
         </Text>
-
-        {/* Personal Information */}
-        <Text style={styles.sectionTitle}>Personal Information</Text>
-        <Text style={styles.text}>Date of Birth: 30-03-2006</Text>
-        <Text style={styles.text}>Gender: Female</Text>
-        <Text style={styles.text}>Marital Status: Single</Text>
-      </View>
-    </ScrollView>
-  );
-}
-
+        
 export default App;
 
 const styles = StyleSheet.create({
@@ -80,7 +64,7 @@ const styles = StyleSheet.create({
     margin: 16,
     padding: 20,
     borderRadius: 16,
-    elevation: 4, // Android shadow
+    elevation: 4, 
   },
   profileImage: {
     width: 110,
